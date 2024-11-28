@@ -1,4 +1,4 @@
-# Hasktal
+# Nome do projeto
 
 
 **Disciplina**: FGA0210 - PARADIGMAS DE PROGRAMAÇÃO - T01 <br>
@@ -39,16 +39,20 @@
 
 
 ## Participações
-Apresente, brevemente, como cada membro do grupo contribuiu para o projeto.
-|Nome do Membro | Contribuição | Significância da Contribuição para o Projeto (Excelente/Boa/Regular/Ruim/Nula) | Comprobatórios (ex. links para commits)
-| -- | -- | -- | -- |
-|  Bruno Campos Ribeiro |) || |
-|  Bruno Martins Valério Bomfim | | |   | 
-|  Heitor Marques| |   |  |
-|  José Luís Ramos Teixeira |  |
-|  Leonardo Gonçalves Machado | |  | |
-|  Raquel T. Eucaria Pereira da Costa | |
-|  Zenilda Pedrosa Vieira | | | |
+
+| Nome do Membro                | Contribuição                                   | Significância da Contribuição para o Projeto (Excelente/Boa/Regular/Ruim/Nula) | Comprobatórios (ex. links para commits) |
+| ----------------------------- | --------------------------------------------- | ------------------------------------------- | -------------------------------------- |
+| Bruno Campos Ribeiro          |                                               |                                             |                                        |
+| Bruno Martins Valério Bomfim  |                                               |                                             |                                        |
+| Heitor Marques                |                                               |                                             |                                        |
+| Igor e Silva Penha            |                                               |                                             |                                        |
+| José Luís Ramos Teixeira      |                                               |                                             |                                        |
+| Leonardo Gonçalves Machado    |                                               |                                             |                                        |
+| Lucas Felipe Soares           |                                               |                                             |                                        |
+| Marcos Vinícius de Deus       |                                               |                                             |                                        |
+| Raquel T. Eucaria Pereira da Costa |                                          |                                             |                                        |
+| Zenilda Pedrosa Vieira        |                                               |                                             |                                        |
+
 
 
 ## Outros 
