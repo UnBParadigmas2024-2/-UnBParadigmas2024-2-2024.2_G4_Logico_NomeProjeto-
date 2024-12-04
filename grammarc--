@@ -1,0 +1,69 @@
+<program> ::= <typeSpec> main ( [void] ) <compoundStmt>
+
+<typeSpec> ::= void | char | int
+
+<compoundStmt> ::= { <localDecls> <stmtList> }
+
+<localDecls> ::= <localDecls> <scopedVarDecl> | ε
+
+<scopedVarDecl> ::= <typeSpec> <varDeclList> ; 
+
+<varDeclList> ::= <varDeclList> , <varDeclInit> | <varDeclInit>
+
+<varDeclInit> ::= <varDeclId> | <varDeclId> : <simpleExp>
+
+<varDeclId> ::= ID
+
+<stmtList> ::= <stmtList> <stmt> | ε
+
+<stmt> ::= <expStmt> | <compoundStmt> | <selectStmt> | <iterStmt> | <returnStmt> | <breakStmt>
+
+<expStmt> ::= <exp> ; | ;
+
+<selectStmt> ::= if <simpleExp> <stmt> | if <simpleExp> <stmt> else <stmt>
+
+<iterStmt> ::= while <simpleExp> <stmt>
+
+<returnStmt> ::= return ; | return <exp> ;
+
+<breakStmt> ::= break ;
+
+<exp> ::= <mutable> <assignop> <exp> | <mutable>++ | <mutable>-- | <simpleExp>
+
+<assignop> ::=  = | += | -= | *= | /=
+
+<simpleExp> ::= <simpleExp> <or> <andExp> | <andExp>
+
+<andExp> ::= <andExp> <and> <unaryRelExp> | <unaryRelExp>
+
+<unaryRelExp> ::= <not> <unaryRelExp> | <relExp>
+
+<relExp> ::= <sumExp> <relop> <sumExp> | <sumExp>
+
+<relop> ::= < | <= | > | >= | == | !=
+
+<sumExp> ::= <sumExp> <sumop> <mulExp> | <mulExp>
+
+<sumop> ::= + | -
+
+<mulExp> ::= <mulExp> <mulop> <unaryExp> | <unaryExp>
+
+<mulop> ::= * | / | %
+
+<unaryExp> ::= <unaryop> <unaryExp> | <factor>
+
+<unaryop> ::= -
+
+<factor> ::= <mutable> | <immutable>
+
+<mutable> ::= ID
+
+<immutable> ::= ( <exp> ) | <constant>
+
+<constant> ::= NUMCONST | CHARCONST | true | false
+
+<and> ::= &&
+
+<or> ::= ||
+
+<not> ::= !
