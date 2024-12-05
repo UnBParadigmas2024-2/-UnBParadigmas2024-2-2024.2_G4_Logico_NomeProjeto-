@@ -4,17 +4,20 @@
 
 <compoundStmt> ::= { <localDecls> <stmtList> }
 
-<localDecls> ::= <localDecls> <scopedVarDecl> | ε
+<localDecls> ::= <scopedVarDecl> <localDecls'> | ε
+<localDecls'> ::= <scopedVarDecl> <localDecls'> | ε
 
 <scopedVarDecl> ::= <typeSpec> <varDeclList> ; 
 
-<varDeclList> ::= <varDeclList> , <varDeclInit> | <varDeclInit>
+<varDeclList> ::= <varDeclInit> <varDecList'>
+<varDeclList'> ::= , <varDeclInit> <varDeclList'> | ε
 
-<varDeclInit> ::= <varDeclId> | <varDeclId> : <simpleExp>
+<varDeclInit> ::= <varDeclId> | <varDeclId> = <simpleExp>
 
 <varDeclId> ::= ID
 
-<stmtList> ::= <stmtList> <stmt> | ε
+<stmtList> ::= <stmt> <stmtList'> | ε
+<stmtList'> ::= <stmt> <stmtList'> | ε
 
 <stmt> ::= <expStmt> | <compoundStmt> | <selectStmt> | <iterStmt> | <returnStmt> | <breakStmt>
 
@@ -32,9 +35,11 @@
 
 <assignop> ::=  = | += | -= | *= | /=
 
-<simpleExp> ::= <simpleExp> <or> <andExp> | <andExp>
+<simpleExp> ::= <andExp> <simpleExp'>
+<simpleExp'> ::= <or> <andExp> <simpleExp'> | ε
 
-<andExp> ::= <andExp> <and> <unaryRelExp> | <unaryRelExp>
+<andExp> ::= <unaryRelExp> <andExp'>
+<andExp'> ::= <and> <unaryRelExp> <andExp'> | ε
 
 <unaryRelExp> ::= <not> <unaryRelExp> | <relExp>
 
@@ -42,11 +47,13 @@
 
 <relop> ::= < | <= | > | >= | == | !=
 
-<sumExp> ::= <sumExp> <sumop> <mulExp> | <mulExp>
+<sumExp> ::= <mulExp> < sumExp'>
+<sumExp'> ::= <sumop> <mulExp> <sumExp'> | ε
 
 <sumop> ::= + | -
 
-<mulExp> ::= <mulExp> <mulop> <unaryExp> | <unaryExp>
+<mulExp> ::= <unaryExp> <mulExp'>
+<mulExp'> ::= <mulop> <unaryExp> <mulExp'> | ε
 
 <mulop> ::= * | / | %
 
