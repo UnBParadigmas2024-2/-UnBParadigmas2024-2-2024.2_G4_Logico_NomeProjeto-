@@ -4,7 +4,7 @@
 main :-
     writeln('=== Iniciando Analisador Léxico ==='),
     % Exemplo de código para análise
-    Codigo = ['int', 'main', '(', ')', '{', 'int', 'x', '=', '5', ';', 'if', '(', 'x', '<', '10', ')', '{', 'x', '+=', '1', ';', '}', '}'],
+    Codigo = ['int', 'main', '(', ')', '{', '/*', '*/' ,'int', 'x', '=', '5', ';', 'if', '(', 'x', '<', '10', ')', '{', 'x', '+=', '1', ';', '}', '}'],
     writeln('Código para análise:'),
     writeln(Codigo),
     writeln('Tokenizando...'),
