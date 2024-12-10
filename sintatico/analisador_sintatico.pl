@@ -311,3 +311,16 @@ unaryExp(Tokens0, Return) :-
 
 unaryop(Tokens0, Return) :-
     assertToken(unaryop('-'), Tokens0, Return).
+
+factor(Tokens0, Return) :-
+    mutable(Tokens0, Return);
+    immutable(Tokens0, Return).
+
+mutable(Tokens0, Return) :-
+    assertId(Tokens0, Return).
+
+immutable(Tokens0, Return) :-
+    assertToken(left_paren, Tokens0, Tokens1),
+    exp(Tokens1, Tokens2),
+    assertToken(right_paren, Tokens2, Return);
+    constant(Tokens0, Return).
