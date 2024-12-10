@@ -324,3 +324,18 @@ immutable(Tokens0, Return) :-
     exp(Tokens1, Tokens2),
     assertToken(right_paren, Tokens2, Return);
     constant(Tokens0, Return).
+
+constant(Tokens0, Return) :-
+    assertToken(numconst, Tokens0, Return);
+    assertToken(charconst, Tokens0, Return);
+    assertToken(true, Tokens0, Return);
+    assertToken(false, Tokens0, Return).
+
+and(Tokens0, Return) :-
+    assertToken(and, Tokens0, Return).
+
+or(Tokens0, Return) :-
+    assertToken(or, Tokens0, Return).
+
+not(Tokens0, Return) :-
+    assertToken(not, Tokens0, Return).
