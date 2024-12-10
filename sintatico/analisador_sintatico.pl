@@ -295,3 +295,19 @@ mulExp_(Tokens0, Return) :-
     mulExp_(Tokens2, Tokens3),
     Return = Tokens3;
     Return = Tokens0.
+
+mulop(Tokens0, Return) :-
+    assertToken(mulop('*'), Tokens0, Tokens1),
+    Return = Tokens1;
+    assertToken(mulop('/'), Tokens0, Tokens1),
+    Return = Tokens1;
+    assertToken(mulop('%'), Tokens0, Tokens1),
+    Return = Tokens1.
+
+unaryExp(Tokens0, Return) :-
+    unaryop(Tokens0, Tokens1),
+    unaryExp(Tokens1, Return);
+    factor(Tokens0, Return).
+
+unaryop(Tokens0, Return) :-
+    assertToken(unaryop('-'), Tokens0, Return).
