@@ -279,3 +279,19 @@ sumExp_(Tokens0, Return) :-
 
 	Return = Tokens0.
 
+sumop(Tokens0, Return) :-
+    assertToken(sumop('+'), Tokens0, Tokens1),
+    Return = Tokens1;
+    assertToken(sumop('-'), Tokens0, Tokens1),
+    Return = Tokens1.
+
+mulExp(Tokens0, Return) :-
+    unaryExp(Tokens0, Tokens1),
+    mulExp_(Tokens1, Return).
+
+mulExp_(Tokens0, Return) :-
+    mulop(Tokens0, Tokens1),
+    unaryExp(Tokens1, Tokens2),
+    mulExp_(Tokens2, Tokens3),
+    Return = Tokens3;
+    Return = Tokens0.
