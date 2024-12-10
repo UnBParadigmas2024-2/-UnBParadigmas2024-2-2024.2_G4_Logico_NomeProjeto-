@@ -19,6 +19,8 @@ optionalToken(Token, [Lookahead|List], Return) :-
     
     Return = [Lookahead|List].
 
+
+% <program> ::= <typeSpec> main ( [void] ) <compoundStmt>
 program(Tokens0, Return) :-
     typeSpec(Tokens0, Tokens1), 
     assertToken(main, Tokens1, Tokens2),
@@ -28,6 +30,7 @@ program(Tokens0, Return) :-
     compoundStmt(Tokens5, Tokens6),
     Return = Tokens6.
 
+% <typeSpec> ::= void | char | int
 typeSpec(Tokens0, Return) :-
     assertToken(void, Tokens0, Tokens1), 
     Return = Tokens1, 
@@ -41,6 +44,7 @@ typeSpec(Tokens0, Return) :-
     Return = Tokens3,
     !.
 
+% <compoundStmt> ::= { <localDecls> <stmtList> }
 compoundStmt(Tokens0, Return) :- 
     assertToken(left_brace, Tokens0, Tokens1),
     localDecls(Tokens1, Tokens2),
@@ -48,7 +52,7 @@ compoundStmt(Tokens0, Return) :-
     assertToken(right_brace, Tokens2, Tokens4),
     Return = Tokens4.
 
-
+% <localDecls> ::= <scopedVarDecl> <localDecls_> | ε
 localDecls(Tokens0, Return) :- 
     scopedVarDecl(Tokens0, Tokens1),
     localDecls_(Tokens1, Tokens2),
@@ -56,6 +60,7 @@ localDecls(Tokens0, Return) :-
 
     Return = Tokens0.
 
+% <localDecls_> ::= <scopedVarDecl> <localDecls_> | ε
 localDecls_(Tokens0, Return) :-
     scopedVarDecl(Tokens0, Tokens1),
     localDecls_(Tokens1, Tokens2),
@@ -63,17 +68,20 @@ localDecls_(Tokens0, Return) :-
 
     Return = Tokens0.
 
+% <scopedVarDecl> ::= <typeSpec> <varDeclList> ;
 scopedVarDecl(Tokens0, Return) :- 
     typeSpec(Tokens0, Tokens1),
     varDecList(Tokens1, Tokens2),
     assertToken(semicolon, Tokens2, Tokens3),
     Return = Tokens3.
 
+% <varDeclList> ::= <varDeclInit> <varDecList_>
 varDecList(Tokens0, Return) :-
     varDeclInit(Tokens0, Tokens1),
     varDecList_(Tokens1, Tokens2),
     Return = Tokens2.
 
+% <varDeclList_> ::= , <varDeclInit> <varDeclList_> | ε
 varDecList_(Tokens0, Return) :-
     assertToken(comma, Tokens0, Tokens1),
     varDeclInit(Tokens1, Tokens2),
