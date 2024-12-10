@@ -170,3 +170,112 @@ breakStmt(Tokens0, Return) :-
     assertToken(semicolon, Tokens1, Tokens2),
     Return = Tokens2.
 
+exp(Tokens0, Return) :-
+    mutable(Tokens0, Tokens1),
+    assignop(Tokens1, Tokens2),
+    exp(Tokens2, Tokens3),
+    Return = Tokens3;
+
+    mutable(Tokens0, Tokens1),
+    assertToken(increment, Tokens1, Tokens2),
+    Return = Tokens2;
+
+	mutable(Tokens0, Tokens1),
+    assertToken(decrement, Tokens1, Tokens2),
+    Return = Tokens2;
+
+    simpleExp(Tokens0, Tokens1),
+    Return = Tokens1.
+
+assignop(Tokens0, Return) :-
+    assertToken(assign, Tokens0, Tokens1),
+	Return = Tokens1;
+
+	assertToken(add_assign, Tokens0, Tokens1),
+	Return = Tokens1;
+
+	assertToken(sub_assign, Tokens0, Tokens1),
+	Return = Tokens1;
+
+	assertToken(mul_assign, Tokens0, Tokens1),
+	Return = Tokens1;
+
+	assertToken(div_assign, Tokens0, Tokens1),
+	Return = Tokens1.
+
+
+simpleExp(Tokens0, Return) :-
+	andExp(Tokens0, Tokens1),
+	simpleExp_(Tokens1, Tokens2),
+	Return = Tokens2.
+	
+simpleExp_(Tokens0, Return) :-
+	assertToken(or, Tokens0, Tokens1),
+	andExp(Tokens1, Tokens2),
+	simpleExp_(Tokens2, Tokens3),
+	Return = Tokens3;
+
+	Return = Tokens0.
+
+andExp(Tokens0, Return) :-
+	unaryRelExp(Tokens0, Tokens1),
+	andExp_(Tokens1, Tokens2),
+	Return = Tokens2.
+
+andExp_(Tokens0, Return) :-
+	assertToken(and, Tokens0, Tokens1),
+	unaryRelExp(Tokens1, Tokens2),
+	andExp_(Tokens2, Tokens3),
+	Return = Tokens3;
+
+	Return = Tokens0.
+
+unaryRelExp(Tokens0, Return) :-
+	assertToken(not, Tokens0, Tokens1),
+	unaryRelExp(Tokens1, Tokens2),
+	Return = Tokens2;
+
+	relExp(Tokens0, Tokens1),
+	Return = Tokens1.
+
+relExp(Tokens0, Return) :-
+	sumExp(Tokens0, Tokens1),
+	relop(Tokens1, Tokens2),
+	sumExp(Tokens2, Tokens3),
+	Return = Tokens3;
+
+	sumExp(Tokens0, Tokens1),
+	Return = Tokens1.
+
+relop(Tokens0, Return) :-
+	assertToken(relop('<'), Tokens0, Tokens1),
+	Return = Tokens1;
+	
+	assertToken(relop('<='), Tokens0, Tokens1),
+	Return = Tokens1;
+
+	assertToken(relop('>'), Tokens0, Tokens1),
+	Return = Tokens1;
+	
+	assertToken(relop('>='), Tokens0, Tokens1),
+	Return = Tokens1;
+	
+	assertToken(relop('=='), Tokens0, Tokens1),
+	Return = Tokens1;
+	
+	assertToken(relop('!='), Tokens0, Tokens1),
+	Return = Tokens1.
+
+sumExp(Tokens0, Return) :-
+	mulExp(Tokens0, Tokens1),
+	sumExp_(Tokens1, Tokens2);
+	Return = Tokens2.
+
+sumExp_(Tokens0, Return) :-
+	sumop(Tokens0, Tokens1),
+	mulExp(Tokens1, Tokens2),
+	sumExp_(Tokens2, Tokens3),
+	Return = Tokens3;
+
+	Return = Tokens0.
+
