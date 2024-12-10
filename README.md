@@ -83,3 +83,13 @@ Quaisquer outras informações sobre o projeto podem ser descritas aqui. Não es
 
 
 #### (IV) Trabalhos Futuros
+
+## Bibliografia
+
+[1] AHO, Alfred V.; LAM, Monica S.; SETHI, Ravi; ULLMAN, Jeffrey D. **Compilers: Principles, Techniques, and Tools**. 2. ed. Boston: Pearson Addison Wesley, 2006.
+
+[2] COSTA JÚNIOR, Edson Alves da. **Repositório da Disciplina de Compiladores 1**. Disponível em: [link](https://github.com/edsomjr/Compiladores). Acesso em: 10 dez. 2024.
+
+[3] RIBAS, Bruno César. **Materiais da Disciplina de Compiladores 1**. Disponível em: [link](https://www.brunoribas.com.br/compiladores/2024-2/). Acesso em: 10 dez. 2024.
+
+[4] SERRANO, Milene. **Materiais da Disciplina de Paradigmas de Programação**. Disponível em: [link](https://aprender3.unb.br/). Acesso em: 10 dez. 2024.
