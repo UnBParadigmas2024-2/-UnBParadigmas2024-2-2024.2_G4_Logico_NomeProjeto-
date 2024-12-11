@@ -22,6 +22,12 @@
 
 ## Sobre
 
+<center>
+<img src="assets/logo_c--.png" width="20%"/><br>
+<label><b>Imagem 1:</b> Logo do C-- (Fonte: Bruno Martins).</label><br><br>
+</center>
+
+
 **g--** é o projeto de um possível compilador desenvolvido em Prolog para a linguagem fictícia C--, que representa um subconjunto simplificado da linguagem C.  Criado com o objetivo de explorar conceitos fundamentais de compiladores, linguagens de programação e o paradigma lógico de programação, o **g--** busca processar o código-fonte escrito em C--, verificando sua correctude léxica e sintática.
 
 ### A Linguagem C--
@@ -34,13 +40,17 @@ C-- é projetada como um subset da linguagem C, contendo apenas os recursos esse
 - Função principal: O ponto de entrada do programa é uma função `main()` obrigatória.
 - Expressões matemáticas: Suporte a operadores aritméticos (`+`, `-`, `*`, `/`, `%`) e relacionais (`<`, `>`, `==`, etc.).
 
-O C-- elimina recursos mais complexos do C, como funções e ponteiros, tornando a linguagem mais factível para o projeto da disciplina. Veja a [Gramática da Linguagem C--](grammar.md) para mais detalhes.
+O C-- elimina recursos mais complexos do C, como funções e ponteiros, tornando a linguagem mais factível para o projeto da disciplina.
 
 #### Estrutura do Compilador g--:
 
 1. **Análise Léxica:** O analisador léxico transforma o código-fonte em uma sequência de tokens, representando as menores unidades significativas da linguagem, como identificadores, números, operadores e palavras-chave.
 
-2. **Análise Sintática:** O analisador sintático utiliza um conjunto de regras gramaticais para verificar se a sequência de tokens forma estruturas válidas em C--. Essa etapa é implementada como um parser descendente recursivo em Prolog,  utilizando predicados para cada produção da gramática.
+Veja a documentação do [analisador léxico](lexico/README.md) para mais detalhes.
+
+2. **Análise Sintática:** O analisador sintático utiliza um conjunto de regras gramaticais para verificar se a sequência de tokens forma estruturas válidas em C--. Essa etapa é implementada como um parser descendente recursivo em Prolog, utilizando predicados para cada produção da gramática.
+
+Veja a [Gramática da Linguagem C--](grammar.md) para mais detalhes.
 
 ## Screenshots
 

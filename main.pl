@@ -1,5 +1,5 @@
-:- consult('analisador_lexico_cmm.pl').
-:- consult('../sintatico/parser.pl').
+:- consult('lexico/analisador_lexico_cmm.pl').
+:- consult('sintatico/analisador_sintatico.pl').
 
 % Função principal para processar e exibir tokens
 main :-
