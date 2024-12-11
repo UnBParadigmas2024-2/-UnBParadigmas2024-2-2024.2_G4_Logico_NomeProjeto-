@@ -10,13 +10,6 @@ token(return, 'return').
 token(break, 'break').
 token(true, 'true').
 token(false, 'false').
-token(switch, 'switch').
-token(case, 'case').
-token(do, 'do').
-token(for, 'for').
-token(sizeof, 'sizeof').
-token(struct, 'struct').
-
 
 % Símbolos
 token(left_paren, '(').
@@ -25,14 +18,11 @@ token(left_brace, '{').
 token(right_brace, '}').
 token(semicolon, ';').
 token(comma, ',').
-token(colon, ':').
 token(assign, '=').
 token(add_assign, '+=').
 token(sub_assign, '-=').
 token(mul_assign, '*=').
 token(div_assign, '/=').
-token(increment, '++').
-token(decrement, '--').
 
 % Operadores lógicos e relacionais
 token(or, '||').
@@ -44,9 +34,6 @@ token(relop('=='), '==').
 token(relop('!='), '!=').
 token(relop('>='), '>=').
 token(relop('<='), '<=').
-token(comment_single, '//').
-token(comment_multi_start, '/*').
-token(comment_multi_end, '*/').
 
 % Operadores aritméticos
 token(sumop('+'), '+').

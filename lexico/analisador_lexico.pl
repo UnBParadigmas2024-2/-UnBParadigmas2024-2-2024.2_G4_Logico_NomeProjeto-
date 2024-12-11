@@ -1,5 +1,5 @@
 % Carregar a base léxica
-:- consult('base_lexica_cmm.pl').
+:- consult('base_lexica.pl').
 
 % Tokenizar uma lista de caracteres
 tokenizar([], []).
