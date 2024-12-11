@@ -1,6 +1,6 @@
 # *g--*, um compilador para a linguagem *C--*
 
-> *"C makes it easy to shoot yourself in the foot; C++ makes it harder, but when you do it blows your whole leg off. "* ― Bjarne Stroustrup
+> *"C makes it easy to shoot yourself in the foot; C++ makes it harder, but when you do it blows your whole leg off."* ― Bjarne Stroustrup
 
 **Disciplina**: FGA0210 - PARADIGMAS DE PROGRAMAÇÃO - T01 <br>
 **Nro do Grupo**: 02<br>
@@ -20,43 +20,27 @@
 | 20/2045268 | Raquel T. Eucaria Pereira da Costa |
 | 21/2002907 | Zenilda Pedrosa Vieira             |
 
-
 ## Sobre
 
-**g--** é o projeto de um possível compilador desenvolvido em Prolog para a
-linguagem fictícia C--, que representa um subconjunto simplificado da linguagem
-C.  Criado com o objetivo de explorar conceitos fundamentais de compiladores,
-linguagens de programação e o paradigma lógico de programação, o **g--** busca
-processar o código-fonte escrito em C--, verificando sua correctude léxica e
-sintática.
+**g--** é o projeto de um possível compilador desenvolvido em Prolog para a linguagem fictícia C--, que representa um subconjunto simplificado da linguagem C.  Criado com o objetivo de explorar conceitos fundamentais de compiladores, linguagens de programação e o paradigma lógico de programação, o **g--** busca processar o código-fonte escrito em C--, verificando sua correctude léxica e sintática.
 
 ### A Linguagem C--
 
-C-- é projetada como um subset da linguagem C, contendo apenas os recursos
-essenciais da linguagem para facilitar o processo de análise e compilação.
-Algumas de suas características incluem:
+C-- é projetada como um subset da linguagem C, contendo apenas os recursos essenciais da linguagem para facilitar o processo de análise e compilação. Algumas de suas características incluem:
 
-- Tipos de dados básicos: `int`, `char`, `void`, além de constantes como `true`
-  e `false`.
+- Tipos de dados básicos: `int`, `char`, `void`, além de constantes como `true` e `false`.
 - Estruturas de controle: `if`, `else`, `while`, e `return`.
 - Declaração de variáveis: Permite declarações simples e inicializações.
 - Função principal: O ponto de entrada do programa é uma função `main()` obrigatória.
-- Expressões matemáticas: Suporte a operadores aritméticos (`+`, `-`, `*`, `/`,
-  `%`) e relacionais (`<`, `>`, `==`, etc.).
+- Expressões matemáticas: Suporte a operadores aritméticos (`+`, `-`, `*`, `/`, `%`) e relacionais (`<`, `>`, `==`, etc.).
 
-O C-- elimina recursos mais complexos do C, como funções e ponteiros,
-tornando a linguagem mais factível para o projeto da disciplina.
+O C-- elimina recursos mais complexos do C, como funções e ponteiros, tornando a linguagem mais factível para o projeto da disciplina.
 
 #### Estrutura do Compilador g--:
 
-1. **Análise Léxica:** O analisador léxico transforma o código-fonte em uma
-sequência de tokens, representando as menores unidades significativas da
-linguagem, como identificadores, números, operadores e palavras-chave.
+1. **Análise Léxica:** O analisador léxico transforma o código-fonte em uma sequência de tokens, representando as menores unidades significativas da linguagem, como identificadores, números, operadores e palavras-chave.
 
-2. **Análise Sintática:** O analisador sintático utiliza um conjunto de regras
-gramaticais para verificar se a sequência de tokens forma estruturas válidas em
-C--. Essa etapa é implementada como um parser descendente recursivo em Prolog, 
-utilizando predicados para cada produção da gramática.
+2. **Análise Sintática:** O analisador sintático utiliza um conjunto de regras gramaticais para verificar se a sequência de tokens forma estruturas válidas em C--. Essa etapa é implementada como um parser descendente recursivo em Prolog,  utilizando predicados para cada produção da gramática.
 
 ## Screenshots
 
