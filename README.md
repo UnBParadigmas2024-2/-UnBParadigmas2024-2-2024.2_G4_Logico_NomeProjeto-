@@ -23,10 +23,11 @@
 ## Sobre
 
 <center>
+<div align='center'>
 <img src="assets/logo_c--.png" width="20%"/><br>
 <label><b>Imagem 1:</b> Logo do C-- (Fonte: Bruno Martins).</label><br><br>
+</div>
 </center>
-
 
 **g--** é o projeto de um possível compilador desenvolvido em Prolog para a linguagem fictícia C--, que representa um subconjunto simplificado da linguagem C.  Criado com o objetivo de explorar conceitos fundamentais de compiladores, linguagens de programação e o paradigma lógico de programação, o **g--** busca processar o código-fonte escrito em C--, verificando sua correctude léxica e sintática.
 
