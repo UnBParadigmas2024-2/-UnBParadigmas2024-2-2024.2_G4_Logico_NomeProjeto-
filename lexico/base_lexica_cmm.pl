@@ -1,9 +1,24 @@
-% tokens
+% Palavras-chave
 token(void, 'void').
 token(char, 'char').
 token(int, 'int').
 token(main, 'main').
-token(void, 'void').
+token(if, 'if').
+token(else, 'else').
+token(while, 'while').
+token(return, 'return').
+token(break, 'break').
+token(true, 'true').
+token(false, 'false').
+token(switch, 'switch').
+token(case, 'case').
+token(do, 'do').
+token(for, 'for').
+token(sizeof, 'sizeof').
+token(struct, 'struct').
+
+
+% Símbolos
 token(left_paren, '(').
 token(right_paren, ')').
 token(left_brace, '{').
@@ -16,13 +31,10 @@ token(add_assign, '+=').
 token(sub_assign, '-=').
 token(mul_assign, '*=').
 token(div_assign, '/=').
-token(if, 'if').
-token(else, 'else').
-token(while, 'while').
-token(return, 'return').
-token(break, 'break').
 token(increment, '++').
 token(decrement, '--').
+
+% Operadores lógicos e relacionais
 token(or, '||').
 token(and, '&&').
 token(not, '!').
@@ -32,6 +44,11 @@ token(relop('=='), '==').
 token(relop('!='), '!=').
 token(relop('>='), '>=').
 token(relop('<='), '<=').
+token(comment_single, '//').
+token(comment_multi_start, '/*').
+token(comment_multi_end, '*/').
+
+% Operadores aritméticos
 token(sumop('+'), '+').
 token(sumop('-'), '-').
 token(mulop('*'), '*').
@@ -39,23 +56,7 @@ token(mulop('/'), '/').
 token(mulop('%'), '%').
 token(unaryop('-'), '-').
 
-% defincao de ids e constantes
+% Identificadores e constantes
 token(id(ID), ID) :- atom_chars(ID, [C|_]), char_type(C, alpha).
-token(numconst(NUM), NUM) :- number(NUM).
-token(charconst(CHAR), CHAR) :- atom_chars(CHAR, ['\'', _ , '\'']).
-token(true, 'true').
-token(false, 'false').
-
-% Tokenize uma lista de átomos (código de entrada)
-tokenize([], []).
-tokenize([H|T], [Token|Tokens]) :-
-    token(Token, H),
-    tokenize(T, Tokens).
-
-% execute: swpl
-% tokenize(['int', 'main', '(', ')', '{', 'return', ';', '}'], Tokens).
-% roda os testes...deixei um exemplo
-
-% teste:
-% usa essa entrada aqui:tokenize(['int', 'main', '(', ')', '{', 'return', ';', '}'], Tokens).
-% ele vai retornar isso:  Tokens = [int, main, left_paren, right_paren, left_brace, return, semicolon, right_brace].
+token(numconst(NUM), NUM) :- atom_number(NUM, _).
+token(charconst(CHAR), CHAR) :- atom_chars(CHAR, ['\'', _, '\'']).
