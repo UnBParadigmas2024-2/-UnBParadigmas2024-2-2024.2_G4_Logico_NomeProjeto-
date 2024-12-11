@@ -9,12 +9,14 @@ main :-
         writeln('=== Iniciando Analisador Léxico ==='),
         analisa_arquivo(Filename, Tokens),
         writeln('Tokens Gerados:'),
-        writeln(Tokens)
+        writeln(Tokens),
         writeln('=== Analise Sintática ==='),
-        parser(Tokens)
+        parser(Tokens),
+        writeln('Analise Completa'),
+        halt(0)
     ; writeln('Erro: Nenhum arquivo fornecido como argumento.'), halt(1)
     ).
-    
+
 % Analisador léxico principal
 analisa_arquivo(NomeArquivo, Tokens) :-
     open(NomeArquivo, read, Stream),
