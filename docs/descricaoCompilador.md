@@ -14,9 +14,9 @@ A escolha do Prolog foi motivada pela sua natureza declarativa, que simplifica a
 
 ## Metodologia
 
-## Etapas da compilação desenvolvidas
+## Definição da gramática
 
-### Definição da gramática
+## Etapas da compilação desenvolvidas
 
 ### Análise léxica
 
