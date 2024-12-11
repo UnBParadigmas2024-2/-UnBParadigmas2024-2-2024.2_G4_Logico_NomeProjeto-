@@ -34,7 +34,7 @@ C-- é projetada como um subset da linguagem C, contendo apenas os recursos esse
 - Função principal: O ponto de entrada do programa é uma função `main()` obrigatória.
 - Expressões matemáticas: Suporte a operadores aritméticos (`+`, `-`, `*`, `/`, `%`) e relacionais (`<`, `>`, `==`, etc.).
 
-O C-- elimina recursos mais complexos do C, como funções e ponteiros, tornando a linguagem mais factível para o projeto da disciplina.
+O C-- elimina recursos mais complexos do C, como funções e ponteiros, tornando a linguagem mais factível para o projeto da disciplina. Veja a [Gramática da Linguagem C--](grammar.md) para mais detalhes.
 
 #### Estrutura do Compilador g--:
 

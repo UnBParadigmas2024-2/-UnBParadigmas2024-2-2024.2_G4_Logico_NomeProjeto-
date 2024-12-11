@@ -1,0 +1,78 @@
+# Gramática da Linguagem *C--*
+
+    <program> ::= <typeSpec> main ( [void] ) <compoundStmt>
+
+    <typeSpec> ::= void | char | int
+
+    <compoundStmt> ::= { <localDecls> <stmtList> }
+
+    <localDecls> ::= <scopedVarDecl> <localDecls'> | ε
+    <localDecls'> ::= <scopedVarDecl> <localDecls'> | ε
+
+    <scopedVarDecl> ::= <typeSpec> <varDeclList> ; 
+
+    <varDeclList> ::= <varDeclInit> <varDecList'>
+    <varDeclList'> ::= , <varDeclInit> <varDeclList'> | ε
+
+    <varDeclInit> ::= <varDeclId> | <varDeclId> = <simpleExp>
+
+    <varDeclId> ::= ID
+
+    <stmtList> ::= <stmt> <stmtList'> | ε
+    <stmtList'> ::= <stmt> <stmtList'> | ε
+
+    <stmt> ::= <expStmt> | <compoundStmt> | <selectStmt> | <iterStmt> | <returnStmt> | <breakStmt>
+
+    <expStmt> ::= <exp> ; | ;
+
+    <selectStmt> ::= if <simpleExp> <stmt> | if <simpleExp> <stmt> else <stmt>
+
+    <iterStmt> ::= while <simpleExp> <stmt>
+
+    <returnStmt> ::= return ; | return <exp> ;
+
+    <breakStmt> ::= break ;
+
+    <exp> ::= <mutable> <assignop> <exp> | <mutable>++ | <mutable>-- | <simpleExp>
+
+    <assignop> ::=  = | += | -= | *= | /=
+
+    <simpleExp> ::= <andExp> <simpleExp'>
+    <simpleExp'> ::= <or> <andExp> <simpleExp'> | ε
+
+    <andExp> ::= <unaryRelExp> <andExp'>
+    <andExp'> ::= <and> <unaryRelExp> <andExp'> | ε
+
+    <unaryRelExp> ::= <not> <unaryRelExp> | <relExp>
+
+    <relExp> ::= <sumExp> <relop> <sumExp> | <sumExp>
+
+    <relop> ::= < | <= | > | >= | == | !=
+
+    <sumExp> ::= <mulExp> < sumExp'>
+    <sumExp'> ::= <sumop> <mulExp> <sumExp'> | ε
+
+    <sumop> ::= + | -
+
+    <mulExp> ::= <unaryExp> <mulExp'>
+    <mulExp'> ::= <mulop> <unaryExp> <mulExp'> | ε
+
+    <mulop> ::= * | / | %
+
+    <unaryExp> ::= <unaryop> <unaryExp> | <factor>
+
+    <unaryop> ::= -
+
+    <factor> ::= <mutable> | <immutable>
+
+    <mutable> ::= ID
+
+    <immutable> ::= ( <exp> ) | <constant>
+
+    <constant> ::= NUMCONST | CHARCONST | true | false
+
+    <and> ::= &&
+
+    <or> ::= ||
+
+    <not> ::= !
