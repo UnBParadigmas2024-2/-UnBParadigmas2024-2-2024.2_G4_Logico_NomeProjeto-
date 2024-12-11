@@ -93,7 +93,7 @@ varDecList_(Tokens0, Return) :-
 % <varDeclInit> ::= <varDeclId> | <varDeclId> = <simpleExp>
 varDeclInit(Tokens0, Return) :-
     varDeclId(Tokens0, Tokens1),
-    Return = Tokens1.
+    Return = Tokens1;
 
     varDeclId(Tokens0, Tokens1),
     assertToken(assign, Tokens1, Tokens2),
@@ -114,7 +114,7 @@ stmtList(Tokens0, Return) :-
     Return = Tokens0.
 
 % <stmtList_> ::= <stmt> <stmtList_> | ε
-stmtList_(Tokens1, Return) :-
+stmtList_(Tokens0, Return) :-
     stmt(Tokens0, Tokens1),
     stmtList_(Tokens1, Tokens2),
     Return = Tokens2;
@@ -206,7 +206,7 @@ exp(Tokens0, Return) :-
     simpleExp(Tokens0, Tokens1),
     Return = Tokens1.
 
-% <assignop> ::=  = | += | -= | *= | /=/
+% <assignop> ::=  = | += | -= | *= | /=
 assignop(Tokens0, Return) :-
     assertToken(assign, Tokens0, Tokens1),
 	Return = Tokens1;
@@ -292,10 +292,10 @@ relop(Tokens0, Return) :-
 	assertToken(relop('!='), Tokens0, Tokens1),
 	Return = Tokens1.
 
-% <sumExp> ::= <mulExp> < sumExp_>
+% <sumExp> ::= <mulExp> <sumExp_>
 sumExp(Tokens0, Return) :-
 	mulExp(Tokens0, Tokens1),
-	sumExp_(Tokens1, Tokens2);
+	sumExp_(Tokens1, Tokens2),
 	Return = Tokens2.
 
 % <sumExp_> ::= <sumop> <mulExp> <sumExp_> | ε
