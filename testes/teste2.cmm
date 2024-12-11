@@ -1,6 +1,5 @@
-void print_hello(int count) {
-    while (count > 0) {
-        count--;
-        printf("Hello, World!\n");
-    }
+int main() {
+    int x = 10, y = -20;
+    if (x<=y)
+        return x - y;
 }

@@ -7,23 +7,17 @@ main :-
     current_prolog_flag(argv, Args),
     ( Args = [Filename|_] ->
         writeln('=== Iniciando Analisador Léxico ==='),
-        writeln('Lendo código do arquivo...'),
-        read_file(Filename, Codigo),
-        writeln('Código para análise:'),
-        writeln(Codigo),
-        writeln('Tokenizando...'),
-        tokenizar(Codigo, Tokens),
+        analisa_arquivo(Filename, Tokens),
         writeln('Tokens Gerados:'),
-        writeln(Tokens),
+        writeln(Tokens)
         writeln('=== Analise Sintática ==='),
         parser(Tokens)
     ; writeln('Erro: Nenhum arquivo fornecido como argumento.'), halt(1)
     ).
-
-% Função para ler o conteúdo do arquivo e convertê-lo em uma lista de palavras
-read_file(Filename, Codigo) :-
-    open(Filename, read, Stream),
-    read_string(Stream, _, String),
+    
+% Analisador léxico principal
+analisa_arquivo(NomeArquivo, Tokens) :-
+    open(NomeArquivo, read, Stream),
+    read_string(Stream, _, Conteudo),
     close(Stream),
-    split_string(String, " \t\n", " \t\n", Words),
-    maplist(atom_string, Codigo, Words).
+    analisa(Conteudo, Tokens).

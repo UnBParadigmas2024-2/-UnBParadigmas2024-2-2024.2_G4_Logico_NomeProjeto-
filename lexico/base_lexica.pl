@@ -42,8 +42,3 @@ token(mulop('*'), '*').
 token(mulop('/'), '/').
 token(mulop('%'), '%').
 token(unaryop('-'), '-').
-
-% Identificadores e constantes
-token(id(ID), ID) :- atom_chars(ID, [C|_]), char_type(C, alpha).
-token(numconst(NUM), NUM) :- atom_number(NUM, _).
-token(charconst(CHAR), CHAR) :- atom_chars(CHAR, ['\'', _, '\'']).
