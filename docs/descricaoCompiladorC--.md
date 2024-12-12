@@ -1,18 +1,42 @@
 # Descrição do compilador do projeto C--
 
+## Motivação para escolha do projeto
+
+A principal motivação para a escolha deste projeto foi a oportunidade de inovar e explorar um tema pouco abordado na disciplina, já que não identificamos outros grupos que tenham optado por um projeto semelhante.
+
+Além disso, a afinidade de alguns integrantes do grupo com o tema de compiladores foi um fator determinante, pois acreditamos que o interesse e contribuiu significativamente para o sucesso do projeto e para o aprendizado coletivo.
+
+## Divisão do grupo
+
+O grupo, composto por 10 integrantes, foi dividido em dois subgrupos de 5 integrantes cada, visando uma melhor organização na execução das tarefas. Um dos subgrupos ficou responsável pela análise léxica, dedicando-se ao desenvolvimento do módulo que identifica e categoriza os tokens do código-fonte. O outro subgrupo concentrou seus esforços na análise sintática, encarregando-se de estruturar as regras gramaticais e construir o parser.
+
+### Grupo léxico
+
+- Heitor Marques
+- José Luís Ramos Teixeira
+- Lucas Felipe Soares
+- Marcos Vinícius de Deus
+- Zenilda Pedrosa Vieira
+
+### Grupo sintático
+
+- Bruno Campos Ribeiro
+- Bruno Martins Valério Bomfim
+- Igor e Silva Penha
+- Leonardo Gonçalves Machado
+- Raquel T. Eucária Pereira da Costa
+
+## Introdução
+
 O projeto C-- implementa um compilador básico para uma linguagem de programação de escopo reduzido, inspirada na sintaxe do C. Este compilador foi desenvolvido em Prolog e foca principalmente na análise léxica e sintática, cobrindo um subconjunto de construções como declarações, condicionais e operações aritméticas.
 
 O objetivo do projeto é demonstrar a viabilidade de usar Prolog, uma linguagem de programação lógica, como ferramenta para o desenvolvimento de compiladores, explorando suas capacidades de correspondência de padrões e manipulação de estruturas de dados.
-
-## Introdução
 
 Um compilador é uma ferramenta essencial no desenvolvimento de software, permitindo a tradução de linguagens de alto nível para código executável. Este projeto busca apresentar uma abordagem educacional para a criação de compiladores, utilizando a linguagem Prolog para implementar as etapas iniciais do processo: análise léxica e sintática.
 
 A análise léxica identifica as unidades básicas do programa (tokens), como palavras-chave, identificadores e operadores. Já a análise sintática verifica se a sequência de tokens segue as regras gramaticais da linguagem.
 
 A escolha do Prolog foi motivada pela sua natureza declarativa, que simplifica a especificação e a validação de gramáticas. O escopo reduzido da linguagem C-- foi definido para balancear complexidade e viabilidade, devido à limitação de tempo, permitindo a aplicação de conceitos fundamentais de compilação sem a necessidade de um ambiente de execução complexo.
-
-## Metodologia
 
 ## Definição da gramática
 A [gramática](../grammarc--) desenvolvida para o compilador **g-**- é definida pelo conjunto de produções da linguagem e segue o padrão Backus-Naur Form (BNF). Nessa definição:
