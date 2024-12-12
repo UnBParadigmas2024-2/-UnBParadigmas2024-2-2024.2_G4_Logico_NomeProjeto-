@@ -1,0 +1,9 @@
+int main() {
+    int a, b, c, d, e, f, g = 0;
+    while(a + b >= (c + d) * (e/f)) {
+        while(a - b - c * d + e == 0) {
+            if(true);
+        } 
+    }
+    return 3*x + 1;
+}
