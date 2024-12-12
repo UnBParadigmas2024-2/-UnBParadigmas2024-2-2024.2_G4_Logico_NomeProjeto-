@@ -4,7 +4,7 @@
 
 A principal motivação para a escolha deste projeto foi a oportunidade de inovar e explorar um tema pouco abordado na disciplina, já que não identificamos outros grupos que tenham optado por um projeto semelhante.
 
-Além disso, a afinidade de alguns integrantes do grupo com o tema de compiladores foi um fator determinante, pois acreditamos que o interesse e contribuiu significativamente para o sucesso do projeto e para o aprendizado coletivo.
+Além disso, a afinidade de alguns integrantes do grupo com o tema de compiladores foi um fator determinante, pois acreditamos que o interesse contribuiu significativamente para o sucesso do projeto e para o aprendizado coletivo.
 
 ## Divisão do grupo
 
