@@ -193,18 +193,20 @@ swipl -s main.pl -g main -- teste.cmm
 
 
 
-## Outros 
-Quaisquer outras informações sobre o projeto podem ser descritas aqui. Não esqueça, entretanto, de informar sobre:
+## Outros
 
-#### (I) Lições Aprendidas
+Acesso o relato de cada membro do grupo referente às lições aprendidas, percepções, contribuições, fragilidades e trabalhos futuros através dos links abaixo.
 
-#### (II) Percepções
-
-
-#### (III) Contribuições e Fragilidades
-
-
-#### (IV) Trabalhos Futuros
+- [Bruno Campos Ribeiro]()
+- [Bruno Martins Valério Bomfim](docs/relatos/bruno.md)
+- [Heitor Marques]()
+- [Igor e Silva Penha]()
+- [José Luís Ramos Teixeira]()
+- [Leonardo Gonçalves Machado]()
+- [Lucas Felipe Soares]()
+- [Marcos Vinícius de Deus]()
+- [Raquel T. Eucaria Pereira da Costa]()
+- [Zenilda Pedrosa Vieira]()
 
 ## Bibliografia
 
