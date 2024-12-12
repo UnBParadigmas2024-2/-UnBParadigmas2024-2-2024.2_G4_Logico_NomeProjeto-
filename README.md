@@ -92,6 +92,26 @@ Siga os passos abaixo para configurar o ambiente e executar o programa:
     ```bash
     cd 2024.2_G2_Logico_CompiladorC--/
     ```
+  
+4. **Verifique a instalação**:
+    
+    Para verificar a integridade da instalação do seu compilador g--, execute o seguinte código descrito abaixo:
+
+    ```bash
+    swipl -s main.pl -g main
+    ```
+    
+    É esperado que apareça na tela a seguinte mensagem:
+
+    ```bash
+    === g-- Versão 1.0.0 | 13 de dezembro de 2024 ===
+    Autores: Bruno Ribeiro, Bruno Martins, Heitor Marques,
+    Igor Penha, José Luís Teixeira, Leonardo Machado, Lucas Soares,
+    Marcos de Deus, Raquel Eucária e Zenilda Vieira
+
+    Seu compilador g-- foi instalado corretamente!
+    Compile seu código c-- com "swipl -s main.pl -g main -- <filename>.cmm"
+    ```
 
 ## Uso
 Para utilizar o compilador g--, é necessário que você crie um arquivo com extensão .cmm empregando corretamente expressões válidas da linguagem C--, por meio de qualquer editor de texto ou IDE de sua preferência. Em seguida, basta inserir no terminal o seguinte comando:
