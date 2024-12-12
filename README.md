@@ -197,16 +197,16 @@ swipl -s main.pl -g main -- teste.cmm
 
 Acesso o relato de cada membro do grupo referente às lições aprendidas, percepções, contribuições, fragilidades e trabalhos futuros através dos links abaixo.
 
-- [Bruno Campos Ribeiro]()
-- [Bruno Martins Valério Bomfim](docs/relatos/bruno.md)
-- [Heitor Marques]()
-- [Igor e Silva Penha]()
-- [José Luís Ramos Teixeira]()
-- [Leonardo Gonçalves Machado]()
-- [Lucas Felipe Soares]()
-- [Marcos Vinícius de Deus]()
-- [Raquel T. Eucaria Pereira da Costa]()
-- [Zenilda Pedrosa Vieira]()
+- [Bruno Campos Ribeiro](docs/relatos/brunoRibeiro.md)
+- [Bruno Martins Valério Bomfim](docs/relatos/brunoMartins.md)
+- [Heitor Marques](docs/relatos/heitor.md)
+- [Igor e Silva Penha](docs/relatos/igor.md)
+- [José Luís Ramos Teixeira](docs/relatos/jose.md)
+- [Leonardo Gonçalves Machado](docs/relatos/leonardo.md)
+- [Lucas Felipe Soares](docs/relatos/lucas.md)
+- [Marcos Vinícius de Deus](docs/relatos/marcos.md)
+- [Raquel T. Eucaria Pereira da Costa](docs/relatos/raquel.md)
+- [Zenilda Pedrosa Vieira](docs/relatos/zenilda.md)
 
 ## Bibliografia
 
