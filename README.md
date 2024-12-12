@@ -75,6 +75,27 @@ utilizando predicados para cada produção da gramática.
 </div>
 </center>
 
+
+![exemplo código 1](docs/img/exemplo_codigo1.png)
+
+<center>
+<div align='center'>
+<label><b>Imagem 3:</b> Exemplo da execução do caso de teste 1, disponível na pasta "testes" (Fonte: Bruno Martins e Lucas Soares).</label><br><br>
+</div>
+</center>
+
+
+![exemplo código 3](docs/img/exemplo_codigo3.png)
+
+
+<center>
+<div align='center'>
+<label><b>Imagem 4:</b> Exemplo da execução do caso de teste 3, disponível na pasta "testes" (Fonte: Bruno Martins e Lucas Soares).</label><br><br>
+</div>
+</center>
+
+
+
 ## Instalação e Configuração do Ambiente
 Siga os passos abaixo para configurar o ambiente e executar o programa:
 
