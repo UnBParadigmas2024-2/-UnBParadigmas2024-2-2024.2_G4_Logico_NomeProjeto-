@@ -5,18 +5,27 @@ parser(Tokens) :- program(Tokens, Return), empty(Return).
 assertId([Lookahead|List], Return) :-
     writeln('Assert ID'),
     Lookahead = id(_),
+    writeln('---------------------------------------'),
     Return = List.
+
+assertNumconst([Lookahead|List], Return) :-
+    writeln('Assert numconst'),
+    Lookahead = numconst(_),
+    writeln('---------------------------------------'),
+    Return = List.
+
 
 assertToken(Token, [Lookahead|List], Return) :- 
     write(Lookahead), write(' '), writeln(Token), 
     Lookahead = Token,
+    writeln('---------------------------------------'),
     Return = List.
 
 optionalToken(Token, [Lookahead|List], Return) :- 
     write(Lookahead), write(' '), writeln(Token), 
     Lookahead = Token, 
     Return = List, !; 
-    
+
     Return = [Lookahead|List].
 
 
@@ -48,8 +57,8 @@ typeSpec(Tokens0, Return) :-
 compoundStmt(Tokens0, Return) :- 
     assertToken(left_brace, Tokens0, Tokens1),
     localDecls(Tokens1, Tokens2),
-    %stmtList(Tokens2, Tokens3),
-    assertToken(right_brace, Tokens2, Tokens4),
+    stmtList(Tokens2, Tokens3),
+    assertToken(right_brace, Tokens3, Tokens4),
     Return = Tokens4.
 
 % <localDecls> ::= <scopedVarDecl> <localDecls_> | ε
@@ -365,7 +374,7 @@ immutable(Tokens0, Return) :-
 
 % <constant> ::= NUMCONST | CHARCONST | true | false
 constant(Tokens0, Return) :-
-    assertToken(numconst, Tokens0, Return);
+    assertNumconst(Tokens0, Return);
     assertToken(charconst, Tokens0, Return);
     assertToken(true, Tokens0, Return);
     assertToken(false, Tokens0, Return).
