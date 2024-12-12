@@ -12,7 +12,7 @@ main :-
             ->  writeln('======================================='),
                 writeln('Análise léxica concluída com sucesso')
             ;   writeln('======================================='),
-                writeln('Encontrado erro de sintaxe'),
+                writeln('Encontrado erro léxico'),
                 writeln('======================================='),
                 halt(1)),
         writeln('======================================='),
