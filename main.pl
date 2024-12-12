@@ -6,13 +6,13 @@
 main :-
     current_prolog_flag(argv, Args),
     ( Args = [Filename|_] ->
-        writeln(''),
+        writeln('=== g-- Versão 1.0.0 | 13 de dezembro de 2024 ===\n'),
         writeln('===== Iniciando Analisador Léxico ====='),
         ( analisa_arquivo(Filename, Tokens)
             ->  writeln('======================================='),
-                writeln('Análise léxica concluída com sucesso')
+                writeln('\033[32mAnálise léxica concluída com sucesso!\033[0m')
             ;   writeln('======================================='),
-                writeln('Encontrado erro léxico'),
+                writeln('\033[31mEncontrado erro léxico.\033[0m'),
                 writeln('======================================='),
                 halt(1)),
         writeln('======================================='),
@@ -23,13 +23,13 @@ main :-
         writeln('======================================='),
         ( parser(Tokens)
             ->  writeln('\n======================================='),
-                writeln('Análise sintática concluída com sucesso')
+                writeln('\033[32mAnálise sintática concluída com sucesso!\033[0m')
             ;   writeln('======================================='),
-                writeln('Encontrado erro de sintaxe'),
+                writeln('\033[31mEncontrado erro de sintaxe.\033[0m'),
                 writeln('======================================='),
                 halt(1)),
         writeln('======================================='),
-        writeln('Analise Completa - Código aceito'),
+        writeln('\033[32mAnálise Completa - Código aceito!\033[0m'),
         writeln('=======================================\n'),
         halt(0)
     ;   writeln('=== g-- Versão 1.0.0 | 13 de dezembro de 2024 ==='),
