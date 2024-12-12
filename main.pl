@@ -6,15 +6,36 @@
 main :-
     current_prolog_flag(argv, Args),
     ( Args = [Filename|_] ->
-        writeln('=== Iniciando Analisador Léxico ==='),
-        analisa_arquivo(Filename, Tokens),
+        writeln(''),
+        writeln('===== Iniciando Analisador Léxico ====='),
+        ( analisa_arquivo(Filename, Tokens)
+            ->  writeln('======================================='),
+                writeln('Análise léxica concluída com sucesso')
+            ;   writeln('======================================='),
+                writeln('Encontrado erro de sintaxe'),
+                writeln('======================================='),
+                halt(1)),
+        writeln('======================================='),
         writeln('Tokens Gerados:'),
         writeln(Tokens),
-        writeln('=== Analise Sintática ==='),
-        parser(Tokens),
-        writeln('Analise Completa'),
+        writeln(''),
+        writeln('=== Iniciando Analisador Sintático ===='),
+        writeln('======================================='),
+        ( parser(Tokens)
+            ->  writeln('\n======================================='),
+                writeln('Análise sintática concluída com sucesso')
+            ;   writeln('======================================='),
+                writeln('Encontrado erro de sintaxe'),
+                writeln('======================================='),
+                halt(1)),
+        writeln('======================================='),
+        writeln('Analise Completa - Código aceito'),
+        writeln('=======================================\n'),
         halt(0)
-    ; writeln('Erro: Nenhum arquivo fornecido como argumento.'), halt(1)
+    ;   writeln('======================================='),
+        writeln('Erro: Nenhum arquivo fornecido como argumento'),
+        writeln('=======================================\n'),
+        halt(1)
     ).
 
 % Analisador léxico principal
