@@ -28,6 +28,16 @@ Neste escopo, a gramática está livre de recursão à esquerda e paradigma elim
 
 O analisador léxico é responsável por identificar e classificar os componentes básicos do código-fonte, como palavras-chave, identificadores, números, operadores e símbolos, convertendo-os em tokens. Esses tokens são então usados pelo analisador sintático para verificar a estrutura do código.
 
+#### Exemplo:
+
+- soma = 10 + 5
+
+1. O identificador soma
+2. O símbolo de atribuição =
+3. O número 10
+4. O símbolo +
+5. O número 5
+
 **Implementação**
 
 - Arquivo: `analisador_lexico.pl `.
