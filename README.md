@@ -65,6 +65,8 @@ gramaticais para verificar se a sequência de tokens forma estruturas válidas e
 C--. Essa etapa é implementada como um parser descendente recursivo em Prolog, 
 utilizando predicados para cada produção da gramática.
 
+Para uma leitura mais detalhada sobre os aspectos do compilador g--, acesse a nossa [documentação](docs/descricaoCompiladorC--.md) na íntegra.
+
 ## Screenshots
 
 ![msg boas-vindas](docs/img/welcome.png)
@@ -189,9 +191,6 @@ swipl -s main.pl -g main -- teste.cmm
 | Marcos Vinícius de Deus       | Participação mais ativa na criação do analisador Léxico. Principalmente na geração da tabela de tokens. Contribuí em alguns pontos da documentação também, como criação do documento de descrição do nosso projeto. Outro ponto que contribuí foi com a elaboração do roteiro do vídeo e edição do mesmo| Boa | [Analisador léxico](https://github.com/UnBParadigmas2024-2/2024.2_G2_Logico_CompiladorC--/commit/2ed288d3c2c5187291e220bbe402caff5664072e) <br> [Documentação](https://github.com/UnBParadigmas2024-2/2024.2_G2_Logico_CompiladorC--/commit/b6bd1cf048c72e0408c40b019137b1225bdb4df2) <br> [Roteiro do vídeo](https://github.com/UnBParadigmas2024-2/2024.2_G2_Logico_CompiladorC--/issues/6) |
 | Raquel T. Eucária Pereira da Costa |                                           |                                                                    |                                             |
 | Zenilda Pedrosa Vieira        |                                               |                                                                    |                                             |
-
-
-
 
 ## Outros
 
