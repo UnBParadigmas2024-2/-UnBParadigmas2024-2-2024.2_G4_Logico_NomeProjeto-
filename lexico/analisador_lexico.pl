@@ -5,30 +5,43 @@ analisa(Input, Tokens) :-
     (string(Input) -> string_codes(Input, CharList); CharList = Input),
     analisa_charlist(CharList, Tokens).
 
+% Sucesso se a lista estiver vazia
 analisa_charlist([], []).
+
+% Ignorar espaços em branco
 analisa_charlist([Char|Resto], Tokens) :-
-    char_type(Char, space), !, % Ignorar espaços
+    char_type(Char, space), !, 
     analisa_charlist(Resto, Tokens).
+
+% Reconhecer números
 analisa_charlist(Lista, [Token|Tokens]) :-
     pega_numero(Lista, Numero, Resto),
     Numero \= [],
     number_codes(Num, Numero),
     Token = numconst(Num),
     analisa_charlist(Resto, Tokens).
+
+% Reconhecer operadores compostos (ex.: <=, >=, ==)
 analisa_charlist([Char, Next|Resto], [Token|Tokens]) :-
-    atom_codes(Operador, [Char, Next]), % Verifica operadores compostos
+    atom_codes(Operador, [Char, Next]),
     token(Token, Operador), !,
     analisa_charlist(Resto, Tokens).
+
+% Reconhecer símbolos individuais (ex.: +, ;)
 analisa_charlist([Char|Resto], [Token|Tokens]) :-
     atom_codes(Simbolo, [Char]),
     token(Token, Simbolo), !,
     analisa_charlist(Resto, Tokens).
+
+% Reconhecer identificadores (ex.: variável ou palavra-chave)
 analisa_charlist(Lista, [Token|Tokens]) :-
     pega_identificador(Lista, Identificador, Resto),
     Identificador \= [],
     atom_codes(Ident, Identificador),
     (token(Token, Ident) -> true; Token = id(Ident)),
     analisa_charlist(Resto, Tokens).
+
+% Caso de token não reconhecido
 analisa_charlist([Char|_], _) :- % Tratamento de erro
     \+ char_type(Char, space), % Não é espaço
     \+ char_type(Char, alpha), % Não é alfabético
