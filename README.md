@@ -3,7 +3,7 @@
 > *"C makes it easy to shoot yourself in the foot; C++ makes it harder, but when you do it blows your whole leg off. "* ― Bjarne Stroustrup
 
 **Disciplina**: FGA0210 - PARADIGMAS DE PROGRAMAÇÃO - T01 <br>
-**Nro do Grupo**: 02<br>
+**Número do Grupo**: 02<br>
 **Paradigma**: Lógico<br>
 
 ## Alunos
@@ -156,18 +156,19 @@ swipl -s main.pl -g main -- teste.cmm
 
 ## Participações
 
-| Nome do Membro                | Contribuição                                   | Significância da Contribuição para o Projeto (Excelente/Boa/Regular/Ruim/Nula) | Comprobatórios (ex. links para commits) |
-| ----------------------------- | --------------------------------------------- | ------------------------------------------- | -------------------------------------- |
-| Bruno Campos Ribeiro          |                                               |                                             |                                        |
-| Bruno Martins Valério Bomfim  |                                               |                                             |                                        |
-| Heitor Marques                |                                               |                                             |                                        |
-| Igor e Silva Penha            |                                               |                                             |                                        |
-| José Luís Ramos Teixeira      |                                               |                                             |                                        |
-| Leonardo Gonçalves Machado    |                                               |                                             |                                        |
-| Lucas Felipe Soares           |                                               |                                             |                                        |
-| Marcos Vinícius de Deus       |                                               |                                             |                                        |
-| Raquel T. Eucaria Pereira da Costa |                                          |                                             |                                        |
-| Zenilda Pedrosa Vieira        |                                               |                                             |                                        |
+| **Nome do Membro**            | **Contribuição**                              | **Significância da Contribuição** (Excelente/Boa/Regular/Ruim/Nula) | **Comprobatórios** (ex. links para commits) |
+|-------------------------------|-----------------------------------------------|--------------------------------------------------------------------|---------------------------------------------|
+| Bruno Campos Ribeiro          |                                               |                                                                    |                                             |
+| Bruno Martins Valério Bomfim  |                                               |                                                                    |                                             |
+| Heitor Marques                |                                               |                                                                    |                                             |
+| Igor e Silva Penha            |                                               |                                                                    |                                             |
+| José Luís Ramos Teixeira      |                                               |                                                                    |                                             |
+| Leonardo Gonçalves Machado    |                                               |                                                                    |                                             |
+| Lucas Felipe Soares           | Paticipação principalmente com a criação do analisador Léxico. Desde a geração da tabela de Tokens até a lógica em si. Participei revisando código e debbug também. Criei o presente respositório e a iniciação da documentação que fora avançada por colegas.                                               | Excelente                                                                   |[Analisador Léxico e organização dos arquivos](d86da91c40416ef0face2430cfa3bbaca70ee8ec) <br>[Base e criação de testes](5a8c3661369e464cd0ca1c18e02a4a36b8ba2883)<br>[Criação da Tabela de Tokens](16889339971738ac116ed8aac0a83bf93941a3b0)<br>[Criação do template de documentação do projeto](6f18b93e7cf44015e7168c33523df3faaf8f6df9)                                            |
+| Marcos Vinícius de Deus       |                                               |                                                                    |                                             |
+| Raquel T. Eucaria Pereira da Costa |                                           |                                                                    |                                             |
+| Zenilda Pedrosa Vieira        |                                               |                                                                    |                                             |
+
 
 
 
