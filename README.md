@@ -17,7 +17,7 @@
 | 21/1029405 | Leonardo Gonçalves Machado         |
 | 20/2016767 | Lucas Felipe Soares                |
 | 20/0062379 | Marcos Vinícius de Deus            |
-| 20/2045268 | Raquel T. Eucaria Pereira da Costa |
+| 20/2045268 | Raquel T. Eucária Pereira da Costa |
 | 21/2002907 | Zenilda Pedrosa Vieira             |
 
 
@@ -27,7 +27,7 @@
 linguagem fictícia C--, que representa um subconjunto simplificado da linguagem
 C.  Criado com o objetivo de explorar conceitos fundamentais de compiladores,
 linguagens de programação e o paradigma lógico de programação, o **g--** busca
-processar o código-fonte escrito em C--, verificando sua correctude léxica e
+processar o código-fonte escrito em C--, verificando sua corretude léxica e
 sintática.
 
 ### A Linguagem C--
@@ -185,9 +185,9 @@ swipl -s main.pl -g main -- teste.cmm
 | Igor e Silva Penha            |                                               |                                                                    |                                             |
 | José Luís Ramos Teixeira      |                                               |                                                                    |                                             |
 | Leonardo Gonçalves Machado    |                                               |                                                                    |                                             |
-| Lucas Felipe Soares           | Paticipação principalmente com a criação do analisador Léxico. Desde a geração da tabela de Tokens até a lógica em si. Participei revisando código e debbug também. Criei o presente respositório e a iniciação da documentação que fora avançada por colegas.                                               | Excelente                                                                   |[Analisador Léxico e organização dos arquivos](d86da91c40416ef0face2430cfa3bbaca70ee8ec) <br>[Base e criação de testes](5a8c3661369e464cd0ca1c18e02a4a36b8ba2883)<br>[Criação da Tabela de Tokens](16889339971738ac116ed8aac0a83bf93941a3b0)<br>[Criação do template de documentação do projeto](6f18b93e7cf44015e7168c33523df3faaf8f6df9)                                            |
-| Marcos Vinícius de Deus       | Participação mais ativa na criação do analisador Léxico. Principamente na geração da tabela de tokens. Contribuí em alguns pontos da documentação também, como criação do documento de descrição do nosso projeto. Outro ponto que contribuí foi com a elaboração do roteiro do vídeo e edição do mesmo| Boa | [Analisador lexico](https://github.com/UnBParadigmas2024-2/2024.2_G2_Logico_CompiladorC--/commit/2ed288d3c2c5187291e220bbe402caff5664072e) <br> [Documentação](https://github.com/UnBParadigmas2024-2/2024.2_G2_Logico_CompiladorC--/commit/b6bd1cf048c72e0408c40b019137b1225bdb4df2) <br> [Roteiro do vídeo](https://github.com/UnBParadigmas2024-2/2024.2_G2_Logico_CompiladorC--/issues/6) |
-| Raquel T. Eucaria Pereira da Costa |                                           |                                                                    |                                             |
+| Lucas Felipe Soares           | Participação principalmente com a criação do analisador Léxico. Desde a geração da tabela de Tokens até a lógica em si. Participei revisando código e debug também. Criei o presente repositório e a iniciação da documentação que fora avançada por colegas.                                               | Excelente                                                                   |[Analisador Léxico e organização dos arquivos](d86da91c40416ef0face2430cfa3bbaca70ee8ec) <br>[Base e criação de testes](5a8c3661369e464cd0ca1c18e02a4a36b8ba2883)<br>[Criação da Tabela de Tokens](16889339971738ac116ed8aac0a83bf93941a3b0)<br>[Criação do template de documentação do projeto](6f18b93e7cf44015e7168c33523df3faaf8f6df9)                                            |
+| Marcos Vinícius de Deus       | Participação mais ativa na criação do analisador Léxico. Principalmente na geração da tabela de tokens. Contribuí em alguns pontos da documentação também, como criação do documento de descrição do nosso projeto. Outro ponto que contribuí foi com a elaboração do roteiro do vídeo e edição do mesmo| Boa | [Analisador léxico](https://github.com/UnBParadigmas2024-2/2024.2_G2_Logico_CompiladorC--/commit/2ed288d3c2c5187291e220bbe402caff5664072e) <br> [Documentação](https://github.com/UnBParadigmas2024-2/2024.2_G2_Logico_CompiladorC--/commit/b6bd1cf048c72e0408c40b019137b1225bdb4df2) <br> [Roteiro do vídeo](https://github.com/UnBParadigmas2024-2/2024.2_G2_Logico_CompiladorC--/issues/6) |
+| Raquel T. Eucária Pereira da Costa |                                           |                                                                    |                                             |
 | Zenilda Pedrosa Vieira        |                                               |                                                                    |                                             |
 
 
@@ -205,7 +205,7 @@ Acesso o relato de cada membro do grupo referente às lições aprendidas, perce
 - [Leonardo Gonçalves Machado](docs/relatos/leonardo.md)
 - [Lucas Felipe Soares](docs/relatos/lucas.md)
 - [Marcos Vinícius de Deus](docs/relatos/marcos.md)
-- [Raquel T. Eucaria Pereira da Costa](docs/relatos/raquel.md)
+- [Raquel T. Eucária Pereira da Costa](docs/relatos/raquel.md)
 - [Zenilda Pedrosa Vieira](docs/relatos/zenilda.md)
 
 ## Bibliografia
