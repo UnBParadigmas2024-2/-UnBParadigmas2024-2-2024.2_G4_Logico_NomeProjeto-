@@ -5,24 +5,27 @@ parser(Tokens) :- program(Tokens, Return), empty(Return).
 assertId([Lookahead|List], Return) :-
     writeln('Assert ID'),
     Lookahead = id(_),
+    writeln('---------------------------------------'),
     Return = List.
 
 assertNumconst([Lookahead|List], Return) :-
     writeln('Assert numconst'),
     Lookahead = numconst(_),
+    writeln('---------------------------------------'),
     Return = List.
 
 
 assertToken(Token, [Lookahead|List], Return) :- 
     write(Lookahead), write(' '), writeln(Token), 
     Lookahead = Token,
+    writeln('---------------------------------------'),
     Return = List.
 
 optionalToken(Token, [Lookahead|List], Return) :- 
     write(Lookahead), write(' '), writeln(Token), 
     Lookahead = Token, 
     Return = List, !; 
-    
+
     Return = [Lookahead|List].
 
 
