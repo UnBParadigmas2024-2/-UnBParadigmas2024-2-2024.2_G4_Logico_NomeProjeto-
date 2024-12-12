@@ -32,6 +32,13 @@ sintática.
 
 ### A Linguagem C--
 
+<center>
+<div align='center'>
+<img src="docs/img/logo_c--.png" width="20%"/><br>
+<label><b>Imagem 1:</b> Logo do C-- (Fonte: Bruno Martins).</label><br><br>
+</div>
+</center>
+
 C-- é projetada como um subset da linguagem C, contendo apenas os recursos
 essenciais da linguagem para facilitar o processo de análise e compilação.
 Algumas de suas características incluem:
@@ -60,9 +67,51 @@ utilizando predicados para cada produção da gramática.
 
 ## Screenshots
 
-## Instalação 
+## Instalação e Configuração do Ambiente
+Siga os passos abaixo para configurar o ambiente e executar o programa:
 
-## Uso 
+1. **Instale o SWI-Prolog**:
+  - No Ubuntu/Debian:
+    ```bash
+    sudo apt-get update
+    sudo apt-get install swi-prolog
+    ```
+  - No Windows ou macOS, baixe e instale a partir do [site oficial do SWI-Prolog](https://www.swi-prolog.org/).
+
+2. **Baixe o repositório do projeto g--**:
+  - Via ssh:
+    ```bash
+    git clone git@github.com:UnBParadigmas2024-2/2024.2_G2_Logico_CompiladorC--.git
+    ```
+  - Via https:
+    ```bash
+    git clone https://github.com/UnBParadigmas2024-2/2024.2_G2_Logico_CompiladorC--.git
+    ```
+
+3. **Navegue até a pasta raiz do repositório**:
+    ```bash
+    cd 2024.2_G2_Logico_CompiladorC--/
+    ```
+
+## Uso
+Para utilizar o compilador g--, é necessário que você crie um arquivo com extensão .cmm empregando corretamente expressões válidas da linguagem C--, por meio de qualquer editor de texto ou IDE de sua preferência. Em seguida, basta inserir no terminal o seguinte comando:
+
+```bash
+swipl -s main.pl -g main -- <nome-do-arquivo>.cmm
+```
+
+A título de exemplo, vamos criar o programa `teste.cmm` definido abaixo:
+
+```bash
+int main(void) {
+	return 0;
+}
+```
+
+Na sequência, bastaria executar no seu terminal:
+```bash
+swipl -s main.pl -g main -- teste.cmm
+```
 
 ## Vídeo
 
