@@ -67,6 +67,14 @@ utilizando predicados para cada produção da gramática.
 
 ## Screenshots
 
+![msg boas-vindas](docs/img/welcome.png)
+
+<center>
+<div align='center'>
+<label><b>Imagem 2:</b> Mensagem de boas-vindas do compilador (Fonte: Bruno Martins).</label><br><br>
+</div>
+</center>
+
 ## Instalação e Configuração do Ambiente
 Siga os passos abaixo para configurar o ambiente e executar o programa:
 
@@ -112,6 +120,17 @@ Siga os passos abaixo para configurar o ambiente e executar o programa:
     Seu compilador g-- foi instalado corretamente!
     Compile seu código c-- com "swipl -s main.pl -g main -- <filename>.cmm"
     ```
+
+    Este processo é descrito visualmente abaixo, utilizando o clone ssh:
+
+    ![gif instalação](docs/img/instalacao.gif)
+
+    <center>
+  <div align='center'>
+  <label><b>Imagem 3:</b> Processo de configuração do ambiente (Fonte: Bruno Martins).</label><br><br>
+  </div>
+  </center>
+
 
 ## Uso
 Para utilizar o compilador g--, é necessário que você crie um arquivo com extensão .cmm empregando corretamente expressões válidas da linguagem C--, por meio de qualquer editor de texto ou IDE de sua preferência. Em seguida, basta inserir no terminal o seguinte comando:
