@@ -20,27 +20,33 @@ A [gramática](../grammarc--) desenvolvida para o compilador **g-**- é definida
 - `::=` indica que o símbolo à esquerda deve ser substituído pela expressão à direita.
 - `__expression__` consiste em uma ou mais sequências de símbolos terminais ou não terminais, separadas por uma barra vertical `|` indicando uma escolha, sendo o todo uma possível substituição para o símbolo à esquerda.
 
-Neste escopo, a gramática apresenta um conjunto FIRST disjunto e está livre de recursão à esquerda. Essas características eliminam a necessidade de ajustes adicionais, como a construção de um tradutor, e permitem a implementação direta de um analisador sintático.
+Neste escopo, a gramática está livre de recursão à esquerda e paradigma elimina a necessidade de apresentar um conjunto FIRST disjunto. Essas características eliminam a necessidade de ajustes adicionais, como a construção de um tradutor, e permitem a implementação direta de um analisador sintático com base nas regras da gramática.
 
 ## Etapas da compilação desenvolvidas
 
 ### Análise léxica
 
+O analisador léxico é responsável por identificar e classificar os componentes básicos do código-fonte, como palavras-chave, identificadores, números, operadores e símbolos, convertendo-os em tokens. Esses tokens são então usados pelo analisador sintático para verificar a estrutura do código.
+
+**Implementação**
+
+- Arquivo: `analisador_lexico.pl `.
+- No projeto, a análise léxica é realizada pela função `analisa/2`, que recebe como entrada o código-fonte (arquivo) e retorna uma lista de tokens identificados.
+- A função percorre a sequência de caracteres do código e, conforme a definição de regras lexicais (presentes no arquivo `base_lexica.pl`), reconhece as palavras-chave, operadores e símbolos, assim como os identificadores e números.
+- Os tokens são então agrupados e retornados ao analisador sintático, que irá usá-los para verificar a sequência conforme a gramática definida.
+
 ### Análise sintática
-O analisador sintático tem como objetivo agrupar várias palavras (tokens) para formar uma sequência que seja validada conforme as regras da sintaxe. Caso a sequência esteja correta, ele gera uma representação em forma de árvore que reflete a estrutura gramatical dos tokens. 
+O analisador sintático tem como objetivo agrupar várias palavras (tokens) para formar uma sequência que seja validada conforme as regras da sintaxe. Caso a sequência esteja correta, ele gera uma representação em forma de árvore que reflete a estrutura gramatical dos tokens.
 
-A árvore sintática, como ilustrado na figura X, servirá de base para o analisador semântico prosseguir com a próxima fase do processo de compilação.
+**Implementação**
 
-<div align="center">
-  <figure style="display: inline-block; margin-right: 20px;">
-    <img src="./img/arvore_sintatica.png" />
-   <figcaption><br><strong>Imagem X</strong>: Exemplo de árvore sintática <br> <strong>Fonte:</strong> AHO, Alfred V. et al. Compilers: Principles, Techniques, and Tools, 2006</figcaption>
-  </figure>
-</div>
-
-No projeto, será desenvolvida a primeira etapa: a **verificação dos tokens**, utilizando o conjunto de regras gramaticais definidas para estruturar o código em C--.
-
-Esta etapa será implementada por meio de um parser descendente recursivo em Prolog, que utilizará predicados correspondentes a cada produção da gramática.
+- Arquivo: `analisador_sintatico.pl`. 
+- No projeto, foi desenvolvido a primeira etapa: a **verificação dos tokens**.
+- Utilizando o conjunto de regras gramaticais definidas para estruturar o código em C-- (`grammarc--`).
+- A implementação do analisador foi feita por meio de um parser descendente recursivo, utilizando predicados correspondentes a cada produção da gramática.
+- O predicado `parser/1` invoca as regras que correspondem à estrutura do programa.
+- A cada verificação, é impresso o "Lookahead" (token atual) e o "Token" esperado, proporcionando visibilidade sobre o que está sendo analisado.
+- Se um erro sintático for encontrado, o processo é interrompido e uma mensagem de erro é apresentada.
 
 
 ## Bibliografia
@@ -68,4 +74,5 @@ Esta etapa será implementada por meio de um parser descendente recursivo em Pro
 | :----: | ---------- | ------------------------------------------------------------------------------ | :---------------------------------------------------------------------------------------------------: |
 | `1.0`  | 10/12/2024 | Criação do documento e adição da introdução                                          | [Marcos Vinícius](https://github.com/Marcos574)  |
 | `1.1`  | 11/12/2024 | Adição da gramática e do sintático                                          | [Raquel Eucaria](https://github.com/raqueleucaria)  |
+| `1.2`  | 12/12/2024 | Adição do léxico                                | [Raquel Eucaria](https://github.com/raqueleucaria)  |
 
