@@ -1,6 +1,6 @@
 # *g--*, um compilador para a linguagem *C--*
 
-> *"C makes it easy to shoot yourself in the foot; C++ makes it harder, but when you do it blows your whole leg off. "* ― Bjarne Stroustrup
+> *"C makes it easy to shoot yourself in the foot; C++ makes it harder, but when you do it blows your whole leg off."* ― Bjarne Stroustrup
 
 **Disciplina**: FGA0210 - PARADIGMAS DE PROGRAMAÇÃO - T01 <br>
 **Número do Grupo**: 02<br>
@@ -180,7 +180,7 @@ swipl -s main.pl -g main -- teste.cmm
 | **Nome do Membro**            | **Contribuição**                              | **Significância da Contribuição** (Excelente/Boa/Regular/Ruim/Nula) | **Comprobatórios** (ex. links para commits) |
 |-------------------------------|-----------------------------------------------|--------------------------------------------------------------------|---------------------------------------------|
 | Bruno Campos Ribeiro          |                                               |                                                                    |                                             |
-| Bruno Martins Valério Bomfim  |                                               |                                                                    |                                             |
+| Bruno Martins Valério Bomfim  | (1) Participação nas reuniões em grupo para definição do tema e demais requisitos do projeto.<br>(2) Análise sintática: revisão da gramática, transcrição das regras de produção para o Prolog, bug search nas expressões produzidas.<br>(3) Análise léxica: revisão do código e de pull requests.<br>(4) Verificação e Validação: geração de alguns casos de teste de código para testar a eficácia do compilador.<br>(5) Integração e organização: realização da integração das duas análises (léxica e sintática) e reorganização da estrutura do repositório.<br>(6) Documentação: produção do README, adição de comentários no código para facilitar o entendimento, correção de erros gramaticais nos textos, e produção do relato pessoal das atividades desenvolvidas (tópico "Outros").<br>(7) Participação da produção do vídeo da entrega. | Excelente |  |
 | Heitor Marques                |                                               |                                                                    |                                             |
 | Igor e Silva Penha            |                                               |                                                                    |                                             |
 | José Luís Ramos Teixeira      |                                               |                                                                    |                                             |
