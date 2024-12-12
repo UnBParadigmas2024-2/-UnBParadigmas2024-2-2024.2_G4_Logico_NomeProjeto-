@@ -17,7 +17,12 @@ main :-
         writeln(Tokens),
         writeln('=== Analise Sintática ==='),
         parser(Tokens)
-    ; writeln('Erro: Nenhum arquivo fornecido como argumento.'), halt(1)
+    ; writeln('=== g-- Versão 1.0.0 | 13 de dezembro de 2024 ==='),
+      writeln('Autores: Bruno Ribeiro, Bruno Martins, Heitor Marques,'), 
+      writeln('Igor Penha, José Luís Teixeira, Leonardo Machado, Lucas Soares,'), 
+      writeln('Marcos de Deus, Raquel Eucária e Zenilda Vieira'),
+      writeln('\nSeu compilador g-- foi instalado corretamente!'),
+      writeln('Compile seu código c-- com "swipl -s main.pl -g main -- <filename>.cmm"'),  halt(1)
     ).
 
 % Função para ler o conteúdo do arquivo e convertê-lo em uma lista de palavras
