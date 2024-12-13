@@ -4,7 +4,7 @@
 
 Tive a oportunidade de no semestre passado cursar a disciplina de Compiladores com o professor Bruno Ribas. O trabalho final dessa disciplina foi implementar um compilador em C ou Python para uma versão simplificada de Pascal. Aqui na disciplina de Paradigmas, ao observarmos as características do paradigma lógico utilizando a linguagem Prolog, decidimos encarar o desafio de criar um compilador de uma versão simplificada da linguagem C, a qual denominamos C--. Nosso foco foi na análise léxica e sintática, não se estendendo à análise semântica nem à tradução devido à complexidade maior dessas etapas e ao curto tempo disponível.
 
-Com o desafio aceito, foi muito interessante criar esse compilador em poucos dias. Nosso escopo é bastante simplificado, mas foi o suficiente para termos um primeiro contato com a linguagem Prolog e colocar em prática vários funcionalidades e conceitos aprendidos em sala e nas vídeo-aulas. 
+Com o desafio aceito, foi muito interessante criar esse compilador em poucos dias. Nosso escopo é bastante simplificado, mas foi o suficiente para termos um primeiro contato com a linguagem Prolog e colocar em prática várias funcionalidades e conceitos aprendidos em sala e nas vídeo-aulas. 
 
 ## Percepções
 
