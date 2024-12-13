@@ -177,6 +177,8 @@ swipl -s main.pl -g main -- teste.cmm
 
 ## Vídeo
 
+https://youtu.be/3ivMw0e_U8Q
+
 ## Participações
 
 | **Nome do Membro**            | **Contribuição**                              | **Significância da Contribuição** (Excelente/Boa/Regular/Ruim/Nula) | **Comprobatórios** (ex. links para commits) |
